@@ -17,7 +17,7 @@ public class UI_HealthHandler : MonoBehaviour
 
     void Start()
     {
-        DisplayHealth(6);
+        DisplayHealth(Health);
     }
 
 
