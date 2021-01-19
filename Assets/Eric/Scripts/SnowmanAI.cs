@@ -31,22 +31,22 @@ public class SnowmanAI : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            attack();
-            cd++;
+            if(cd == 0)
+            {
+                attack();
+                cd = 1;
+            }
+            else
+            {
+                StartCoroutine(cooldown());
+            }
         }
     }
 
     private void attack()
     {
-        if (cd == 0)
-        {
-            Debug.Log("attacking");
-            GameObject ball = Instantiate(snowball, this.transform.position, this.transform.rotation);
-            ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(-100f, 0f));
-        }
-        else
-        {
-            StartCoroutine(cooldown());
-        }
+        Debug.Log("attacking");
+        GameObject ball = Instantiate(snowball, this.transform.position, this.transform.rotation);
+        ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(-700f, 200f));
     }
 }
