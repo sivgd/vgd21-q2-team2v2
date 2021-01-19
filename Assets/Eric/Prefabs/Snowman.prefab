@@ -97,6 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bedbe613074af44781fe5485ede3412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snowball: {fileID: 908499203536038257, guid: 57400e0e8b7a14a468b029ab589923f2, type: 3}
+  cd: 0
 --- !u!95 &6159694518535579169
 Animator:
   serializedVersion: 3
