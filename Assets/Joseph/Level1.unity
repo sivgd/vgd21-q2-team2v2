@@ -3005,7 +3005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1824890677}
   smoothSpd: 5
-  insert: 4.35
+  insert: 0
   offset: {x: 0, y: 2.1, z: -10}
 --- !u!1 &1155923258
 GameObject:
