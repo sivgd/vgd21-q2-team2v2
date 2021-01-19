@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Enemy
+  - Snowman
   layers:
   - Default
   - TransparentFX
