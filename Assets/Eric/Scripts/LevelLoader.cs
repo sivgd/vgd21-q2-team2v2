@@ -17,11 +17,20 @@ public class LevelLoader : MonoBehaviour
             LoadNextLevel();
             levelFinished = false;
         }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            LoadCredits();
-        }
     }
+
+    IEnumerator LoadLevel(string levelName)
+    {
+        //Play animation
+        transition.SetTrigger("Start");
+
+        //Wait
+        yield return new WaitForSeconds(transitionTime);
+
+        //Load Scene
+        SceneManager.LoadScene(levelName);
+    }
+
 
     public void LoadNextLevel()
     {
@@ -29,11 +38,15 @@ public class LevelLoader : MonoBehaviour
     }
     public void LoadCredits()
     {
-        SceneManager.LoadScene("Credits");
+        StartCoroutine(LoadLevel("Credits"));
     }
     public void LoadLevel1()
     {
-        SceneManager.LoadScene("Level1");
+        StartCoroutine(LoadLevel("Level1"));
+    }
+    public void LoadMainMenu()
+    {
+        StartCoroutine(LoadLevel("MainMenu"));
     }
 }
 
