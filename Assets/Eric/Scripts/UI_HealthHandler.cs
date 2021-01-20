@@ -61,7 +61,7 @@ public class UI_HealthHandler : MonoBehaviour
                 heart3.sprite = EmptyHeart;
                 break;
             default:
-                Debug.Log("DisplayHealth default");
+                //Debug.Log("DisplayHealth default");
                 break;
         }
     }
