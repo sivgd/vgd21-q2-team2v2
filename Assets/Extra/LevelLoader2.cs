@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelLoader : MonoBehaviour
+public class LevelLoader2 : MonoBehaviour
 {
     public Animator transition;
     public float transitionTime = 1f;
@@ -19,6 +19,11 @@ public class LevelLoader : MonoBehaviour
         }
     }
 
+    public void LoadNextLevel()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetSceneAt(SceneManager.GetActiveScene().buildIndex + 1).name));
+    }
+
     IEnumerator LoadLevel(string levelName)
     {
         //Play animation
@@ -31,23 +36,12 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(levelName);
     }
 
-
-    public void LoadNextLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
     public void LoadCredits()
     {
-        StartCoroutine(LoadLevel("Credits"));
+        LoadLevel("Credits");
     }
     public void LoadLevel1()
     {
-        StartCoroutine(LoadLevel("Level1"));
-    }
-    public void LoadMainMenu()
-    {
-        StartCoroutine(LoadLevel("MainMenu"));
+        LoadLevel("Level1");
     }
 }
-
-    

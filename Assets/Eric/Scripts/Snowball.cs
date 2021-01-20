@@ -6,6 +6,7 @@ public class Snowball : MonoBehaviour
 {
     private float diePoint;
     public float lifespan;
+    public bool canDMG = true;
 
     // Start is called before the first frame update
     void Start()
@@ -31,8 +32,12 @@ public class Snowball : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            dmg(collision);
-            Destroy(gameObject);
+            if(canDMG)
+            {
+                dmg(collision);
+                Destroy(gameObject);
+                canDMG = false;
+            }
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CreditRoller : MonoBehaviour
 {
@@ -52,6 +53,11 @@ public class CreditRoller : MonoBehaviour
 
 
     } ////Update
+
+    public void mainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 
 
 }
