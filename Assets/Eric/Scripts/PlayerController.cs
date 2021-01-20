@@ -52,7 +52,6 @@ public class PlayerController : MonoBehaviour
     void Update() 
     {
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
-        //animator.SetFloat("SpeedV", Mathf.Abs(rb.velocity.y));
 
         //Jumping----------------------------------------------------------------
 
