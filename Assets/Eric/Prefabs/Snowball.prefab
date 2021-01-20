@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1854631990200870631}
   - component: {fileID: 6173370063553706680}
   - component: {fileID: 1442391508109226287}
+  - component: {fileID: -3281060535947661766}
+  - component: {fileID: 1166058431899270291}
   m_Layer: 0
   m_Name: Snowball
   m_TagString: Untagged
@@ -68,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -583664029
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 75adc9df64746ab44b1d8295cbebdc60, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -103,3 +105,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-3281060535947661766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908499203536038257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e67eac6991976e44aa5edf23048039c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifespan: 4
+--- !u!58 &1166058431899270291
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908499203536038257}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.6

@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public float speedCap = 5f;
     public float jumpForce = 400f;
     public bool grounded;
-    //public GameObject respawnPoint;
+    public GameObject respawnPoint;
     public Animator animator;
     private Rigidbody2D rb;
     private SpriteRenderer sr;
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(-speedCap, rb.velocity.y);
         }
-        Debug.Log(rb.velocity);
+        //Debug.Log(rb.velocity);
     }
 
     void Update() 
@@ -58,20 +58,20 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && grounded == true)
         {
-            //animator.SetBool("IsJumping", true);
+            animator.SetBool("Jumping", true);
             rb.AddForce(new Vector2(0, jumpForce));
         }
     }
 
     public void hit() 
     {
-        sr.color = Color.red;
+        
     }
 
     public void die()
     {
-        //transform.position = respawnPoint.transform.position;
-        //sr.flipX = false;
+        transform.position = respawnPoint.transform.position;
+        sr.flipX = false;
     }
     
     //Collisions-----------------------------------------------------------------
@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
         if (collision.tag == "Ground")
         {
             grounded = true;
-            //animator.SetBool("IsJumping", false);
+            animator.SetBool("Jumping", false);
         }
         //animator.SetBool("IsJumping", false);
     }
@@ -92,6 +92,11 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("hit");
             hit();
+        }
+        if (collision.tag == "Spikes")
+        {
+            Debug.Log("Respawn");
+            die();
         }
     } 
 
