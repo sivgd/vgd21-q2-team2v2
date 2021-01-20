@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
 
     public void Hit() 
     {
-        Debug.Log("hit called");
+        //Debug.Log("hit called");
         healthDisplay.GetComponent<UI_HealthHandler>().Health -= 1;
     }
 

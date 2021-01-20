@@ -15,6 +15,8 @@ public class UI_HealthHandler : MonoBehaviour
     public Sprite HalfHeart;
     public Sprite EmptyHeart;
 
+    public GameObject ui;
+
     private void Update()
     {
         DisplayHealth(Health);
@@ -61,7 +63,7 @@ public class UI_HealthHandler : MonoBehaviour
                 heart3.sprite = EmptyHeart;
                 break;
             default:
-                //Debug.Log("DisplayHealth default");
+                ui.GetComponent<Level_UI_Handler>().WinLoseScreen();
                 break;
         }
     }

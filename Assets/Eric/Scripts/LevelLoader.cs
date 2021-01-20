@@ -31,6 +31,10 @@ public class LevelLoader : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
+    public void LoadLevel1()
+    {
+        SceneManager.LoadScene("Level1");
+    }
 }
 
     

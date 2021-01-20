@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifespan: 4
+  canDMG: 1
 --- !u!58 &1166058431899270291
 CircleCollider2D:
   m_ObjectHideFlags: 0
