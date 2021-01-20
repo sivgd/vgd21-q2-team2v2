@@ -11,6 +11,7 @@ public class SnowmanAI : MonoBehaviour
     public float cooldownTime = 3;
     public float right = -1;
     private float nextFireTime;
+    public float snowballsThrown = 0f;
 
     private void Start()
     {
@@ -38,9 +39,10 @@ public class SnowmanAI : MonoBehaviour
         {
             if (nextFireTime < Time.time)
             {
-                Debug.Log("attacking, setting cooldown");
-                attack();
+                //Debug.Log("attacking, setting cooldown");
                 nextFireTime = Time.time + cooldownTime;
+                attack();
+                snowballsThrown++;
             }
         }
     }

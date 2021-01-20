@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
 
     public void die()
     {
-        Debug.Log("Die called");
+        //Debug.Log("Die called");
         healthDisplay.GetComponent<UI_HealthHandler>().Health -= 2;
         transform.position = respawnPoint.transform.position;
         sr.flipX = false;
