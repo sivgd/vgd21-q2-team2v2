@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -46,12 +47,12 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(-speedCap, rb.velocity.y);
         }
-               
+        Debug.Log(rb.velocity);
     }
 
     void Update() 
     {
-        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        animator.SetFloat("Speed", Math.Abs(rb.velocity.x));
 
         //Jumping----------------------------------------------------------------
 
