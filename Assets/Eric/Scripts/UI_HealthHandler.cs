@@ -15,15 +15,14 @@ public class UI_HealthHandler : MonoBehaviour
     public Sprite HalfHeart;
     public Sprite EmptyHeart;
 
-    void Start()
+    private void Update()
     {
         DisplayHealth(Health);
     }
 
-
     private void DisplayHealth(int v)
     {
-        Debug.Log("DisplayHealth called");
+        //Debug.Log("DisplayHealth called");
         switch (v)
         {
             case 6:

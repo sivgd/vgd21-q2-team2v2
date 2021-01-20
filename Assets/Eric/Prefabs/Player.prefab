@@ -100,8 +100,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   accel: 8
   speedCap: 5
-  jumpForce: 500
+  jumpForce: 400
   grounded: 0
+  respawnPoint: {fileID: 0}
   animator: {fileID: 3781401923252973190}
 --- !u!50 &3781401923252973185
 Rigidbody2D:
@@ -160,10 +161,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.35645127, y: -0.017437339}
+  m_Offset: {x: -0.38043523, y: -0.0574342}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -174,7 +175,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.1682434, y: 7.7884216}
+  m_Size: {x: 3.5157866, y: 8.027819}
   m_EdgeRadius: 0
 --- !u!95 &3781401923252973190
 Animator:

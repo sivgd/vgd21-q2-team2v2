@@ -8,16 +8,7 @@ public class SnowmanAI : MonoBehaviour
 
     public GameObject snowball;
     public float cooldownTime = 3;
-    private float nextFireTime;
-
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    
+    private float nextFireTime; 
 
     private void OnTriggerStay2D(Collider2D collision)
     {

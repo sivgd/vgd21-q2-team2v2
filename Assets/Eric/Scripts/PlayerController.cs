@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
     public float accel = 8f;
+    public float health = 6;
     public float speedCap = 5f;
     public float jumpForce = 400f;
     public bool grounded;
+    public GameObject healthDisplay;
     public GameObject respawnPoint;
     public Animator animator;
     private Rigidbody2D rb;
@@ -63,13 +64,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void hit() 
+    public void Hit() 
     {
-        
+        Debug.Log("hit called");
+        healthDisplay.GetComponent<UI_HealthHandler>().Health -= 1;
     }
 
     public void die()
     {
+        Debug.Log("Die called");
+        healthDisplay.GetComponent<UI_HealthHandler>().Health -= 2;
         transform.position = respawnPoint.transform.position;
         sr.flipX = false;
     }
@@ -88,11 +92,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) 
     {
-        if (collision.tag == "Enemy")
-        {
-            Debug.Log("hit");
-            hit();
-        }
         if (collision.tag == "Spikes")
         {
             Debug.Log("Respawn");

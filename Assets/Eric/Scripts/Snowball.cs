@@ -22,11 +22,16 @@ public class Snowball : MonoBehaviour
         }
     }
 
+    private void dmg(Collider2D target)
+    {
+        target.GetComponent<PlayerController>().Hit();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<PlayerController>().hit();
+            dmg(collision);
             Destroy(gameObject);
         }
     }

@@ -12911,31 +12911,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2764640745587333093, guid: 0e4fe3dcf09476a40a926555c60e68dd,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2764640745587333093, guid: 0e4fe3dcf09476a40a926555c60e68dd,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -0.38043523
-      objectReference: {fileID: 0}
-    - target: {fileID: 2764640745587333093, guid: 0e4fe3dcf09476a40a926555c60e68dd,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.0574342
-      objectReference: {fileID: 0}
-    - target: {fileID: 2764640745587333093, guid: 0e4fe3dcf09476a40a926555c60e68dd,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 3.5157866
-      objectReference: {fileID: 0}
-    - target: {fileID: 2764640745587333093, guid: 0e4fe3dcf09476a40a926555c60e68dd,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 8.027819
-      objectReference: {fileID: 0}
     - target: {fileID: 3781401923252973188, guid: 0e4fe3dcf09476a40a926555c60e68dd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12991,30 +12966,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3781401923252973189, guid: 0e4fe3dcf09476a40a926555c60e68dd,
-        type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3781401923252973191, guid: 0e4fe3dcf09476a40a926555c60e68dd,
-        type: 3}
-      propertyPath: jumpForce
-      value: 400
-      objectReference: {fileID: 0}
     - target: {fileID: 3781401923252973191, guid: 0e4fe3dcf09476a40a926555c60e68dd,
         type: 3}
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 2035274716}
+    - target: {fileID: 3781401923252973191, guid: 0e4fe3dcf09476a40a926555c60e68dd,
+        type: 3}
+      propertyPath: healthDisplay
+      value: 
+      objectReference: {fileID: 1913810783}
     - target: {fileID: 3781401923252973306, guid: 0e4fe3dcf09476a40a926555c60e68dd,
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3781401923252973306, guid: 0e4fe3dcf09476a40a926555c60e68dd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e4fe3dcf09476a40a926555c60e68dd, type: 3}
